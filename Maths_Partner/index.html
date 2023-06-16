@@ -1,1 +1,49 @@
-!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths_Partner</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header">
+            <h1>Maths Partner</h1>
+
+        </div>
+        <button> Saved Solutions</button>
+    </header>
+
+    <main>
+        <div class="main">
+            <div class="hello">
+
+                <label for="problem">Problem</label>
+
+                <input type="text" id="problem" class="inp" name="problem" placeholder="Type Here....">
+
+                <label for="select-category">Select Category</label>
+
+                <select name="category" id="category">
+                    <!-- <option>Select Category</option> -->
+                    <option value="simplify">Simplify</option>
+                    <option value="integration">Integration</option>
+                </select>
+                <button onclick="fetchCall()">Submit</button>
+            </div>
+        </div>
+    </main>
+
+    <section class="answer">
+
+    </section>
+
+
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
