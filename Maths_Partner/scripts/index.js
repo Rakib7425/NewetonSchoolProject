@@ -5,6 +5,7 @@ const fetchCall = async () => {
     const data = [];
     const problem = document.getElementById('problem').value;
     const category = document.getElementById('category').value;
+
     const url = `https://newton.vercel.app/api/v2/${category}/${problem}`
 
     const response = await fetch(url);
@@ -13,7 +14,8 @@ const fetchCall = async () => {
     data.push(jsonData);
     // console.log(data[0].result);
     // console.log(category.value, data.result);
-    const fLetterCaps = category.charAt(0).toUpperCase() + category.slice(1)
+    const fLetterCaps = category.charAt(0).toUpperCase() + category.slice(1);
+
     answer.innerHTML = `
         <div class="ans" id="ans">
             <h3 class="mt-10">${fLetterCaps} : ${problem} </h3>
