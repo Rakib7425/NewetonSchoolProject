@@ -2,9 +2,9 @@ const ansdiv = document.getElementById('ansdiv');
 const problem = document.getElementById('problem');
 const category = document.getElementById('category');
 
+const data = [];
+
 const fetchCall = async () => {
-    const data = [];
-    
     const url = `https://newton.vercel.app/api/v2/${category.value}/${problem.value}`
     // console.log(url);
 
