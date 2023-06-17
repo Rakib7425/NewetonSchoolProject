@@ -27,7 +27,6 @@ const fetchCall = async () => {
             <div class="finalAns" id="finalAns">
                 <h2 class="f" id="f">Final Answer : &nbsp; <b> ${data[i].result} </b></h2>
             </div>
-            
         </div>
     `
     }
