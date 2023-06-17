@@ -11,9 +11,9 @@ if (data.length > 0) {
         card.classList.add("problem-card");
         card.innerHTML = `
         <div class="cards"> 
-            <h4>Category: ${data[i].operation}</h4>
-            <h4>Problem: ${data[i].expression}</h4>
-            <h3>Solution: ${data[i].result}</h3>
+            <h3>Category: ${data[i].operation}</h3>
+            <h3>Problem: ${data[i].expression}</h3>
+            <h2>Solution: ${data[i].result}</h2>
             <button class="deleteBtn delete-btn" data-index="${i}">Delete</button>
         </div>
     `;

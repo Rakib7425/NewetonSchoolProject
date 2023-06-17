@@ -23,9 +23,9 @@ const fetchCall = async () => {
     for (let i = 0; i < data.length; i++) {
         answer.innerHTML = `
         <div class="ans" id="ans">
-            <h3 class="mt-10">${fLetterCaps} : ${problem} </h3>
+            <h2 class="mt-10">${fLetterCaps} : ${problem} </h2>
             <div class="finalAns" id="finalAns">
-                <h3 class="f" id="f">Final Answer &nbsp; : &nbsp; <b> ${data[i].result} </b></h3>
+                <h2 class="f" id="f">Final Answer &nbsp; : &nbsp; <b> ${data[i].result} </b></h2>
             </div>
             
         </div>

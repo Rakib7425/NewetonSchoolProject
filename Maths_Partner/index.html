@@ -26,12 +26,12 @@
 
                 <label for="problem">Problem</label>
 
-                <input type="text" id="problem" class="inp" name="problem" placeholder="Type Here....">
+                <input type="text" id="problem" class="inp" name="problem" placeholder="Type Here...." minlength="2">
 
                 <label for="select-category">Select Category</label>
 
                 <select name="category" id="category">
-                    <!-- <option>Select Category</option> -->
+                    <option>Select Category</option>
                     <option value="simplify">Simplify</option>
                     <option value="integration">Integration</option>
                     <option value="derive">Derive</option>
@@ -44,10 +44,10 @@
 
     <section class="answer" id="answer">
         <div class="ans" id="ans">
-            <h3 class="mt-10"> Category : Problem</h3>
+            <h2 class="mt-10"> Category : Problem</h2>
 
             <div class="finalAns" id="finalAns">
-                <h3 class="f" id="f">Final Answer</h3>
+                <h2 class="f" id="f">Final Answer</h2>
             </div>
             <!-- <div class="delete">
                 <button class="delete-btn" id="delete" role="button">Delete</button>
@@ -59,7 +59,7 @@
             <!-- <div class="cards"> 
                 <h4>Category: Category</h4>
                 <h4>Problem: Problem</h4>
-                <h3>Solution: Solution</h3>
+                <h2>Solution: Solution</h2>
                 <button class="deleteBtn delete-btn" data-index="${i}">Delete</button>
             </div> -->
         </div>
