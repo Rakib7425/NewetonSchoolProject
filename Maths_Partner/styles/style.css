@@ -70,6 +70,7 @@ button {
     min-height: 40px;
     outline: 0;
     padding: 12px 14px;
+    margin-top: 15px;
     text-align: center;
     text-rendering: geometricprecision;
     text-transform: none;
@@ -88,4 +89,19 @@ button {
 
 .delete-btn:active {
     opacity: 0.5;
+}
+
+.savedData{
+    display: flex;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.cards{
+    background-color: aqua;
+    color: black;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 7px;
+    width: 290px;
 }
