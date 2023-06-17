@@ -1,8 +1,9 @@
 const answer = document.getElementById('answer');
 
+const data = [];
+
 
 const fetchCall = async () => {
-    const data = [];
     const problem = document.getElementById('problem').value;
     const category = document.getElementById('category').value;
 
@@ -12,6 +13,7 @@ const fetchCall = async () => {
     const jsonData = await response.json();
     // console.log(jsonData.result);
     data.push(jsonData);
+    localStorage.setItem("problems", JSON.stringify(data));
     // console.log(data[0].result);
     // console.log(category.value, data.result);
     const fLetterCaps = category.charAt(0).toUpperCase() + category.slice(1);
@@ -29,3 +31,5 @@ const fetchCall = async () => {
         </div>
     `
 }
+
+
