@@ -33,8 +33,8 @@ const fetchCall = async () => {
     }
 
 }
-// addToLocakStorage();
 
+// addToLocakStorage();
 for (var i = 0; i < data.length; i++) {
     var card = document.createElement("div");
     card.classList.add("problem-card");
@@ -48,7 +48,6 @@ for (var i = 0; i < data.length; i++) {
     `;
     document.getElementById('historyCardsContainer').appendChild(card);
 }
-
 
 let deleteButtons = document.getElementsByClassName("deleteBtn");
 for (let i = 0; i < deleteButtons.length; i++) {

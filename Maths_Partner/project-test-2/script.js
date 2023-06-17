@@ -16,12 +16,12 @@ var historyCardsContainer = document.getElementById("historyCardsContainer");
 
 
 // Event listener
-searchBtn.addEventListener("click", function() {
+searchBtn.addEventListener("click", function () {
     window.location.href = "history.html";
 });
 
 
-searchBtn.addEventListener("click", function() {
+searchBtn.addEventListener("click", function () {
     var problem = problemInput.value;
     var category = categorySelect.value;
 
@@ -83,11 +83,18 @@ if (window.location.href.includes("index.html")) {
     // Delete button event listener
     var deleteButtons = document.getElementsByClassName("deleteBtn");
     for (var i = 0; i < deleteButtons.length; i++) {
-        deleteButtons[i].addEventListener("click", function() {
+        deleteButtons[i].addEventListener("click", function () {
             var index = this.getAttribute("data-index");
             problems.splice(index, 1);
             localStorage.setItem("problems", JSON.stringify(problems));
             this.parentNode.remove();
         });
+    }
+}
+
+function getItemsFromLocalStorage(problems) {
+    var items = localStorage.getItem(problems);
+    if (items) {
+        return JSON.parse(items);
     }
 }
