@@ -20,28 +20,29 @@ const fetchCall = async () => {
     // console.log(data[0].result);
     // console.log(category.value, data.result);
     const fLetterCaps = category.charAt(0).toUpperCase() + category.slice(1);
-    for (var i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         answer.innerHTML = `
         <div class="ans" id="ans">
             <h3 class="mt-10">${fLetterCaps} : ${problem} </h3>
             <div class="finalAns" id="finalAns">
-                <h4 class="f" id="f">Final Answer &nbsp; : &nbsp; <b> ${data[i].result} </b></h4>
+                <h3 class="f" id="f">Final Answer &nbsp; : &nbsp; <b> ${data[i].result} </b></h3>
             </div>
             
         </div>
     `
     }
-}
 
+}
+// addToLocakStorage();
 
 for (var i = 0; i < data.length; i++) {
     var card = document.createElement("div");
     card.classList.add("problem-card");
     card.innerHTML = `
         <div class="cards"> 
-            <p>Category: ${data[i].operation}</p>
-            <h3>Problem: ${data[i].expression}</h3>
-            <p>Solution: ${data[i].result}</p>
+            <h4>Category: ${data[i].operation}</h4>
+            <h4>Problem: ${data[i].expression}</h4>
+            <h3>Solution: ${data[i].result}</h3>
             <button class="deleteBtn delete-btn" data-index="${i}">Delete</button>
         </div>
     `;
@@ -49,10 +50,10 @@ for (var i = 0; i < data.length; i++) {
 }
 
 
-var deleteButtons = document.getElementsByClassName("deleteBtn");
-for (var i = 0; i < deleteButtons.length; i++) {
+let deleteButtons = document.getElementsByClassName("deleteBtn");
+for (let i = 0; i < deleteButtons.length; i++) {
     deleteButtons[i].addEventListener("click", function () {
-        var index = this.getAttribute("data-index");
+        let index = this.getAttribute("data-index");
         data.splice(index, 1);
         localStorage.setItem("problems", JSON.stringify(data));
         this.parentNode.remove();

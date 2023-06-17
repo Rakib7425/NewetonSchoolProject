@@ -67,7 +67,7 @@ searchBtn.addEventListener("click", function() {
 });
 
 // Load history cards
-if (window.location.href.includes("history.html")) {
+if (window.location.href.includes("index.html")) {
     for (var i = 0; i < problems.length; i++) {
         var card = document.createElement("div");
         card.classList.add("problem-card");
