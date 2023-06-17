@@ -10,7 +10,7 @@ const fetchCall = async () => {
 
     const problem = document.getElementById('problem').value;
     const category = document.getElementById('category').value;
-    const url = `https://newton.vercel.app/api/v2/${category}/${problem}`
+    const url = `https://newton.vercel.app/api/v2/${category}/${encodeURIComponent(problem)}`
 
     const response = await fetch(url);
     const jsonData = await response.json();
@@ -34,27 +34,3 @@ const fetchCall = async () => {
 
 }
 
-//  Create Cards and Show to the Dom
-for (var i = 0; i < data.length; i++) {
-    var card = document.createElement("div");
-    card.classList.add("problem-card");
-    card.innerHTML = `
-        <div class="cards"> 
-            <h4>Category: ${data[i].operation}</h4>
-            <h4>Problem: ${data[i].expression}</h4>
-            <h3>Solution: ${data[i].result}</h3>
-            <button class="deleteBtn delete-btn" data-index="${i}">Delete</button>
-        </div>
-    `;
-    document.getElementById('historyCardsContainer').appendChild(card);
-}
-
-let deleteButtons = document.getElementsByClassName("deleteBtn");
-for (let i = 0; i < deleteButtons.length; i++) {
-    deleteButtons[i].addEventListener("click", function () {
-        let index = this.getAttribute("data-index");
-        data.splice(index, 1);
-        localStorage.setItem("problems", JSON.stringify(data));
-        this.parentNode.remove();
-    });
-}
