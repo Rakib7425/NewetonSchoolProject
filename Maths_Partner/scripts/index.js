@@ -34,7 +34,7 @@ const fetchCall = async () => {
 
 }
 
-// addToLocakStorage();
+//  Create Cards and Show to the Dom
 for (var i = 0; i < data.length; i++) {
     var card = document.createElement("div");
     card.classList.add("problem-card");
