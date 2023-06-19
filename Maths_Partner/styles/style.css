@@ -76,13 +76,13 @@ option {
     justify-content: right;
     margin: 0px 10px;
 }
-button {
-    font-size: 15px;
+/* button { */
+    /* font-size: 15px;
     font: bold;
     padding: 6px;
     border-radius: 10px;
     cursor: pointer;
-}
+} */
 
 .btn-search {
     display: flex;
